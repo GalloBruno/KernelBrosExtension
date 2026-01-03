@@ -1,0 +1,464 @@
+<div id="igBotInjectedContainer" class="igBotParent">
+    <div id="igBotDialog">
+        <div id="igBotDialogQuestion">¿Texto de la pregunta aquí?</div>
+        <div class="igBotInjectedButton" id="btnDialogOK">Aceptar</div>
+        <div class="igBotInjectedButton" id="btnDialogCancel">Cancelar</div>
+    </div>
+    <div id="igBotLeft">
+        <div id="igBotHeading">
+            <div style="display: flex;">
+                <h1 id="h1KernelBrosEngagementBotHeading">KernelBrosBot Instagram</h1>
+            </div>
+            <div id="igBotStatusDiv">Listo para aceptar comandos</div>
+        </div>
+        <div class="pc-tab">
+            <input checked="checked" id="tab1" type="radio" name="pct" />
+            <input id="tab2" type="radio" name="pct" />
+            <input id="tab3" type="radio" name="pct" />
+            <input id="tab4" type="radio" name="pct" />
+            <input id="tab5" type="radio" name="pct" />
+            <input id="tab7" type="radio" name="pct" />
+            <input id="tab8" type="radio" name="pct" />
+            <nav>
+                <ul>
+                    <li class="tab1"> <label for="tab1">Cola de cuentas</label> </li>
+                    <li class="tab2"> <label for="tab2">Cola de medios</label> </li>
+                    <li class="tab8"> <label for="tab8">Cola de acciones</label> </li>
+                    <li class="tab3"> <label for="tab3">Filtros</label> </li>
+                    <li class="tab4"> <label for="tab4">Configuración</label> </li>
+                    <li class="tab5"> <label for="tab5">Registro</label> </li>
+                    <li class="tab7"> <label for="tab7">Ayuda y FAQ</label> </li>
+                </ul>
+            </nav>
+            <section id="mainSection">
+                <div class="tab1">
+                    <div id="queueQuantityRow">
+                        <div id="igBotQueueCount"></div>
+                        <div id="igBotQueueSelectedCount"></div>
+                    </div>
+                    <div id="igBotQueueContainer">
+                        <div class="igBotQueueContainerMessage">
+                            <p>1. Esta es la <i>cola</i>. Usa el botón Cargar abajo para obtener cuentas sobre las que trabajar.</p>
+                            <p>2. <i>Opcional</i>: Puedes seleccionar, eliminar, poner en la lista blanca, etc usando el botón Con selección</p>
+                            <p>3. Usa el botón "Procesar cola" para comenzar a seguir, dejar de seguir, dar like, etc.</p>
+                            <p>4. Por favor lee la Ayuda y FAQ</p>
+                            <p>5. Si tienes algún problema, <b>lee el FAQ</b>, luego envía un correo a <a href="mailto:info@kernelbros.com" class="kernelbrosEmailLink">info@kernelbros.com</a></p>
+                            <br>
+                        </div>
+                    </div>
+            
+                    <div id="igBotBottom">
+                    <div id="igBotQueueContainerButtons">
+                        <div class="igBotInjectedButton flex7" id="btnLoadMenu">Cargar cuentas &#x2191;
+                            <div class="hiddenHover">
+                                <div class="igBotInjectedButton" id="btnViewWhiteList" title="" localeMessage="LoadWhiteList" title="Ver tu lista blanca (KernelBros nunca dejará de seguir cuentas que hayas añadido a tu lista blanca)">Cargar lista blanca</div>
+                                <div class="igBotInjectedButton flex7" id="btnLoadPendingRequests" title="Cargar solicitudes para seguir cuentas privadas que aún no han sido aprobadas o rechazadas (estas cuentan para tu total de seguidos)" localeMessage="LoadPendingFollowRequests">Cargar solicitudes pendientes</div>
+                                <div class="igBotInjectedButton inactive flex7 needsMedia" id="btnLoadAccountsFromMedia" title="Carga cuentas desde la cola de medios">Cargar cuentas desde la cola de medios</div>
+                                <label for="cbMediaIncludeLikersCommentersTagged"> <input type="checkbox" id="cbMediaIncludeLikersCommentersTagged"> Incluir (algunos) que dieron like, comentaron, etiquetados</label>
+                                <div class="igBotInjectedButton inactive flex7" id="btnGetLikers" title="Carga cuentas que dieron like al medio actual" localeMessage="LoadLikers">Cargar quienes dieron like</div>
+                                <div class="igBotInjectedButton inactive flex7" id="btnGetCommenters" title="Carga cuentas que comentaron en el medio actual" localeMessage="LoadCommenters">Cargar quienes comentaron</div>
+                                <div class="igBotInjectedButton inactive flex7" id="btnGetAllUsersFollowing" title="Carga cuentas que la cuenta actual sigue en la cola" localeMessage="LoadCurrentFollowing">Cargar seguidos de la página actual</div>
+                                <div class="igBotInjectedButton inactive flex7" id="btnGetAllUsersFollowers" title="Carga los seguidores de la página actual en la cola" localeMessage="LoadCurrentFollowers">Cargar seguidores de la página actual</div>
+                                <div class="igBotInjectedButton flex7" id="btnLoadSavedQueue" localeMessage="LoadQueue">Cargar cola</div>
+                                <label for="cbLimitQueueSize" id="lblLimitQueueSize">
+                                    <input type="checkbox" checked="checked" id="cbLimitQueueSize"><span localeMessage="queueLimit">Limitar cola a</span>
+                                    <input type="number" value="50" min="1" id="txtLimitQueueSize">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="igBotInjectedButton needsQueueAccts flex7" id="btnSelectionMenu">Seleccionar... &#x2191;
+                            <div class="hiddenHover">
+                                <div class="igBotInjectedButton needsSelectedAccts" id="btnAddToWhiteList" title="Agregar cuentas seleccionadas a la lista blanca para nunca dejar de seguirlas" localeMessage="AddToWhitelist">Agregar seleccionados a lista blanca</div>
+                                <div class="igBotInjectedButton needsQueueAccts" id="btnInvertSelection" title="Seleccionar lo opuesto a lo actualmente seleccionado" localeMessage="InvertSelection">Invertir selección</div>
+                                <div class="igBotInjectedButton needsSelectedAccts" id="btnSelectNone" title="No seleccionar nada" localeMessage="SelectNone">Seleccionar ninguno</div>
+                                <div class="igBotInjectedButton needsQueueAccts" id="btnSelectAll" title="Seleccionar todas las cuentas mostradas" localeMessage="SelectAll">Seleccionar todo</div>
+                                <div class="igBotInjectedButton needsSelectedAccts" id="btnRemoveSelected" title="Eliminar todas las cuentas seleccionadas" localeMessage="RemoveSelected">Eliminar seleccionados</div>
+                            </div>
+                        </div>
+                        <div id="btnProcessQueueHolder" class="igBotInjectedButton">
+                            <div class="igBotInjectedButton needsQueueAccts" id="btnProcessQueue" localeMessage="ProcessQueue">Procesar cola &#x2191;</div>
+                            <div class="hiddenHover">
+                                <div class="processQueueRadioButtons">
+                                    <label for="radioFollow">
+                                        <input type="radio" id="radioFollow" name="queueAction" value="radioFollow" checked /> <span localeMessage="Follow">Seguir</span>
+                                    </label>
+                                    <label for="radioFollowAndLike" title="Dar like a las publicaciones recientes de la cuenta mientras la sigues.">
+                                        <input type="radio" id="radioFollowAndLike" name="queueAction" value="radioFollowAndLike" /> <span>Seguir + Like </span><input type="number" value="1" step="1" min="0" max="12" id="numberFollowLikeLatestPics">
+                                        <span>Foto(s)</span>
+                                    </label>
+                                    <label for="radioLikeOnly" title="Solo dar like a las publicaciones recientes de la cuenta. Usa el mismo número que la caja de arriba.">
+                                        <input type="radio" id="radioLikeOnly" name="queueAction" value="radioNone" /> <span localeMessage="LikeOnly">Solo Like</span>
+                                    </label>
+                                    <label for="radioUnFollow">
+                                        <input type="radio" id="radioUnFollow" name="queueAction" value="radioUnFollow" /> <span localeMessage="Unfollow">Dejar de seguir</span>
+                                    </label>
+                                    <label for="radioRemoveFromFollowers">
+                                        <input type="radio" id="radioRemoveFromFollowers" name="queueAction" value="radioRemoveFromFollowers" /> <span localeMessage="RemoveFromFollowers">Eliminar seguidor</span>
+                                    </label>
+                                    <label for="radioBlock">
+                                        <input type="radio" id="radioBlock" name="queueAction" value="radioBlock" /> <span localeMessage="Block">Bloquear</span>
+                                    </label>
+                                    <label for="radioViewStory" title="Ver la(s) historia(s) de cada cuenta">
+                                        <input type="radio" id="radioViewStory" name="queueAction" value="radioViewStory" /> Ver historia (abre y cierra una nueva pestaña por cada una) 
+                                    </label>
+                                    <label for="cbViewStoryLike" style="padding-left:30px;" title="Dar like a la historia vista al mismo tiempo">
+                                        <input type="checkbox" id="cbViewStoryLike" checked="checked" /> Dar like a la historia mientras se ve
+                                    </label>
+                                    <label for="radioGetMoreData" title="Obtiene más datos de cada cuenta en la cola: Estado privado, seguidores, seguidos, cantidad de publicaciones, etc">
+                                        <input type="radio" id="radioGetMoreData" name="queueAction" value="radioGetMoreData">
+                                        <span localeMessage="GetMoreData">Obtener más datos</span>
+                                    </label>
+                                    <label for="cbGetLastPostDate" style="padding-left:30px;" title="Obtener la fecha de la última publicación del usuario (requiere 1 conexión adicional a la API de Instagram)">
+                                        <input type="checkbox" id="cbGetLastPostDate">
+                                        <span localeMessage="GetLastPostDate">Obtener fecha de última publicación / Captions para idioma</span>
+                                    </label>
+                                    <label for="cbGetExtendedData" style="padding-left:30px;" title="Obtener aún más datos de cada cuenta: Email público, teléfono público, dirección, etc (requiere 1 conexión adicional a la API de Instagram)">
+                                        <input type="checkbox" id="cbGetExtendedData">
+                                        <span localeMessage="GetExtendedData">Obtener datos extendidos</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="igBotInjectedButton needsQueueAccts flex7" id="btnSaveQueueToStorage" localeMessage="SaveQueue">Guardar cola</div>
+                        <div class="igBotInjectedButton needsQueueAccts flex7" id="btnExportQueue" localeMessage="ExportQueue">Exportar cola (CSV)</div>
+                        <div class="igBotInjectedButton needsWhitelistAccts" id="btnSaveWhiteList" title="Guarda la lista blanca en almacenamiento local y/o disco" localeMessage="SaveWhiteList">Guardar lista blanca</div>
+                        <div class="igBotInjectedButton inactive" id="btnStop" localeMessage="Stop">¡Detener!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab2">
+                    <div id="mediaqueueQuantityRow">
+                        <div id="igBotmediaQueueCount"></div>
+                        <div id="igBotmediaQueueSelectedCount"></div>
+                    </div>
+                    <div id="igBotMediaQueueContainer"></div>
+                    <div id="igBotMediaButtonContainer">
+
+                       <div class="igBotInjectedButton flex7" id="btnLoadMenu">Cargar medios &#x2191;
+                            <div class="hiddenHover">
+
+                                <div class="igBotInjectedButton inactive" id="btnLoadThisPost">Cargar esta publicación</span></div>
+                                
+                                <div class="igBotInjectedButton inactive" id="btnLikeHashtag">Cargar publicaciones de #hashtag</span></div>
+
+                                <div class="igBotInjectedButton" id="btnLikeFeed">Cargar publicaciones del feed</span></div>
+                                <label for="includeSuggestedPostsFromFeed"> <input type="checkbox" id="includeSuggestedPostsFromFeed" checked="checked"> Incluir publicaciones sugeridas</label>
+
+
+                                <div class="igBotInjectedButton inactive flex7" id="btnLoadLocationPosts" title="Carga publicaciones con la ubicación actual en la cola de medios">Cargar publicaciones de la página de ubicación</div>
+
+                                <div class="igBotInjectedButton flex7" id="btnLoadSavedMediaQueue" style="display: none;">Cargar cola de medios</div>
+                                <label for="cbLimitQueueSize" id="lblLimitMediaQueueSize">
+                                    <input type="checkbox" checked="checked" id="cbLimitMediaQueueSize"><span localeMessage="queueLimit">Limitar cola a</span>
+                                    <input type="number" value="50" min="1" id="txtLimitMediaQueueSize">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="igBotInjectedButton needsMedia flex7" id="btnMediaSelectionMenu">Seleccionar... &#x2191;
+                            <div class="hiddenHover">
+                                <div class="igBotInjectedButton needsMedia" id="btnMediaInvertSelection" title="Seleccionar lo opuesto a lo actualmente seleccionado" localeMessage="InvertSelection">Invertir selección</div>
+                                <div class="igBotInjectedButton needsSelectedMedia" id="btnMediaSelectNone" title="No seleccionar nada" localeMessage="SelectNone">Seleccionar ninguno</div>
+                                <div class="igBotInjectedButton needsMedia" id="btnMediaSelectAll" title="Seleccionar todas las cuentas mostradas" localeMessage="SelectAll">Seleccionar todo</div>
+                                <div class="igBotInjectedButton needsSelectedMedia" id="btnMediaRemoveSelected" title="Eliminar todas las cuentas seleccionadas" localeMessage="RemoveSelected">Eliminar seleccionados</div>
+                            </div>
+                        </div>
+                        
+                         <div class="igBotInjectedButton" id="btnLikeMediaQueue">Dar like a las publicaciones de la cola de medios</div>
+                         <div class="igBotInjectedButton" id="btnWatchReels" title="Abrirá una nueva pestaña para cada reel, esperará hasta que el video se haya reproducido y cerrará la pestaña">Ver Reels (BETA)</div>
+
+                         <div style="display: flex; flex-direction: column; justify-content: center; padding-right: 10px;">
+                            <label for="LikeWhenWatchingReel" title="Hacer clic en Me gusta después de ver el 75% del reel"><input type="checkbox" id="LikeWhenWatchingReel" checked="checked" />Me gusta al ver</label>
+                            <label for="SaveWhenWatchingReel" title="Hacer clic en Guardar después de ver el 75% del reel"><input type="checkbox" id="SaveWhenWatchingReel" checked="checked" />Guardar al ver</label>
+                        </div>
+
+                        <div class="igBotInjectedButton inactive" id="btnStop2" localeMessage="Stop">¡Detener!</div>
+
+                    </div>
+                </div>
+                <div class="tab8">
+                    <div>
+                        <h3>Acciones programadas</h3>
+
+
+                        <p>*BETA* Función - ¡pronto más acciones!</p>
+
+                        <p>Nota, debes dejar abierta solo una pestaña de Instagram para que esto funcione correctamente</p>
+                        
+                        <table id="tblScheduledActions">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Función</th>
+                                    <th>Fecha/Hora</th>
+                                    <th>Última ejecución</th>
+                                    <th>Repetir diariamente</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                        <h5 id="currentTime">Hora actual: </h5>
+
+
+                        <div class="schedule-row">
+                            <select id="scheduled_action_function_name">
+                                <option value="ajaxLikeAllPostsFromFeed">Cargar publicaciones del feed</option>
+                                <option value="watchReels">Ver Reels</option>
+                                <option value="likeAllMedia">Dar like a las publicaciones de la cola de medios</option>
+                            </select>
+                            <input type="datetime-local" id="scheduled_action_scheduled_time">
+                            <label for="scheduled_action_repeat">
+                                <input type="checkbox" id="scheduled_action_repeat">
+                                Repetir diariamente
+                            </label>
+                            <span class="plus-sign" id="btnAddScheduledAction">&plus;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab3">
+                    <div id="multiFilter">
+                        <h3 localeMessage="AccountFilters">Filtros de cuenta</h3>
+                        <div localeMessage="AccountFiltersHint">Puedes habilitar la aplicación automática de filtros al seguir o dejar de seguir en la configuración. Esto se recomienda para mayor eficiencia y evitar límites de tasa.</div>
+                        <div id="sliders">
+                            <span localeMessage="Followers">Seguidores</span>
+                            <div id="followersSlider"></div>
+                            <span localeMessage="Following">Seguidos</span>
+                            <div id="followingSlider"></div>
+                            <span localeMessage="FollowRatio">Relación de seguimiento</span>
+                            <div id="followRatioSlider"></div>
+                            <span localeMessage="MutualFollowedBy">Seguidos en común</span>
+                            <div id="mutualFollowedBySlider"></div>
+                            <span localeMessage="Posts">Publicaciones</span>
+                            <div id="postsSlider"></div>
+                            <span localeMessage="LastPosted">Última publicación (hace días)</span>
+                            <div id="lastPostedSlider"></div>
+                        </div>
+                        <label for="cbFilterNoProfilePic" id="lblFilterNoProfilePic">
+                            <input type="checkbox" id="cbFilterNoProfilePic" checked="checked" /> <span localeMessage="HasNoProfilePicture">Sin foto de perfil</span>
+                        </label>
+                        <label for="cbFilterProfilePic" id="lblFilterProfilePic">
+                            <input type="checkbox" id="cbFilterProfilePic" checked="checked" /> <span localeMessage="HasProfilePicture">Con foto de perfil</span>
+                        </label>
+                        <label for="cbFilterJoinedRecently">
+                            <input type="checkbox" id="cbFilterJoinedRecently" checked="checked" /> <span localeMessage="JoinedRecentlyAccounts">Cuentas unidas recientemente</span>
+                        </label>
+                        <label for="cbFilterNonJoinedRecently">
+                            <input type="checkbox" id="cbFilterNonJoinedRecently" checked="checked" /> <span localeMessage="NonJoinedRecentlyAccounts">Cuentas no unidas recientemente</span>
+                        </label>
+                        <label for="cbFollowPrivateAccounts" id="lblFollowPrivateAccounts">
+                            <input type="checkbox" id="cbFollowPrivateAccounts" checked="checked" /> <span localeMessage="PrivateAccounts">Cuentas privadas</span>
+                        </label>
+                        <label for="cbFilterNonPrivate">
+                            <input type="checkbox" id="cbFilterNonPrivate" checked="checked" /> <span localeMessage="PublicAccounts">Cuentas públicas</span>
+                        </label>
+                        <label for="cbFilterVerified">
+                            <input type="checkbox" id="cbFilterVerified" checked="checked" /> <span localeMessage="VerifiedAccounts">Cuentas verificadas</span>
+                        </label>
+                        <label for="cbFilterNonVerified">
+                            <input type="checkbox" id="cbFilterNonVerified" checked="checked" /> <span localeMessage="NonVerifiedAccounts">Cuentas no verificadas</span>
+                        </label>
+                        <br>
+                        <br>
+                        <label for="cbFilterExternalUrlContains">
+                            <input type="checkbox" id="cbFilterExternalUrlContains" />
+                            <span localeMessage="ExternalUrlContainsText">Enlace en la biografía contiene</span>
+                            <input type="text" id="txtFilterExternalUrlContains" placeholder="youtube.com">
+                        </label>
+                        <label for="cbFilterExternalUrlNotContains">
+                            <input type="checkbox" id="cbFilterExternalUrlNotContains" />
+                            <span localeMessage="ExternalUrlNotContainsText">Enlace en la biografía no contiene</span>
+                            <input type="text" id="txtFilterExternalUrlNotContains" placeholder="onlyfans.com">
+                        </label>
+                        <label for="cbFilterBioContains">
+                            <input type="checkbox" id="cbFilterBioContains" />
+                            <span localeMessage="BioContainsText">La biografía contiene texto</span>
+                            <input type="text" id="txtFilterBioContains">
+                        </label>
+                        <label for="cbFilterBioNotContains">
+                            <input type="checkbox" id="cbFilterBioNotContains" />
+                            <span localeMessage="BioNotContainsText">La biografía no contiene texto</span>
+                            <input type="text" id="txtFilterBioNotContains">
+                        </label>
+                        <label for="cbFilterBusiness" id="lblFilterBusiness">
+                            <input type="checkbox" id="cbFilterBusiness" checked="checked" /> <span localeMessage="BusinessAccounts">Cuentas de negocio</span>
+                        </label>
+                        <label for="cbFilterNonBusiness">
+                            <input type="checkbox" id="cbFilterNonBusiness" checked="checked" /> <span localeMessage="NonBusinessAccounts">Cuentas no de negocio</span>
+                        </label>
+                        <label for="cbFilterBusinessCategoryNameContains">
+                            <input type="checkbox" id="cbFilterBusinessCategoryNameContains" />
+                            <span localeMessage="BusinessCategoryNameContainsText">La categoría de negocio contiene</span>
+                            <input type="text" id="txtFilterBusinessCategoryNameContains" />
+                        </label>
+                        <label for="cbFilterBusinessCategoryNameNotContains">
+                            <input type="checkbox" id="cbFilterBusinessCategoryNameNotContains" />
+                            <span localeMessage="BusinessCategoryNameNotContainsText">La categoría de negocio no contiene</span>
+                            <input type="text" id="txtFilterBusinessCategoryNameNotContains">
+                        </label>
+                        <br>
+                        <br>
+                        <div localeMessage="BelowFiltersApply">Los siguientes filtros solo se aplican al seguir (no al dejar de seguir):</div>
+                        <br>
+                        <br>
+                        <label for="cbFollowsMe">
+                            <input type="checkbox" id="cbFollowsMe" /> <span localeMessage="FollowsMe">Me sigue</span>
+                        </label>
+                        <label for="cbNonFollowsMe">
+                            <input type="checkbox" id="cbNonFollowsMe" checked="checked" /> <span localeMessage="DoesntFollowMe">No me sigue</span>
+                        </label>
+                        <label for="cbFollowedByMe">
+                            <input type="checkbox" id="cbFollowedByMe" /> <span localeMessage="FollowedByMe">Seguido por mí</span>
+                        </label>
+                        <label for="cbNonFollowedByMe">
+                            <input type="checkbox" id="cbNonFollowedByMe" checked="checked" /> <span localeMessage="NotFollowedByMe">No seguido por mí</span>
+                        </label>
+                        <br>
+                        <br>
+                        <div class="igBotInjectedButton" id="btnResetFilter" localeMessage="ResetFilters">Restablecer filtros</div>
+                        <div class="igBotInjectedButton" id="btnApplyFilter" localeMessage="ApplyFilters">Aplicar filtros a la cola actual</div>
+                    </div>
+                </div>
+                <div class="tab4">
+                    <div id="igBotOptions">
+                        <h3 localeMessage="Settings">Configuración</h3>
+                        <details id="detailsPerformanceOptions">
+                            <summary localeMessage="PerformanceOptions">Opciones de rendimiento</summary>
+                            <div class="followOptions">
+                                <label for="cbShowStamps">
+                                    <input type="checkbox" checked="checked" id="cbShowStamps" /> <span localeMessage="cbShowStamps">Mostrar sellos en la cola</span>
+                                </label>
+                                <label for="cbRemoveFromQueue" style="display:none;">
+                                    <input type="checkbox" id="cbRemoveFromQueue" /> <span localeMessage="cbRemoveFromQueue">Eliminar cuentas de la cola después de procesar</span>
+                                </label>
+                                <label for="cbConvenienceLinks">
+                                    <input type="checkbox" checked="checked" id="cbConvenienceLinks" /> <span localeMessage="cbConvenienceLinks">Mostrar botones de conveniencia en el feed (Lista blanca/Dejar de seguir)</span>
+                                </label>
+                                <label for="cbShowQueueOnScreen">
+                                    <input type="checkbox" checked="checked" id="cbShowQueueOnScreen" /> <span localeMessage="cbShowQueueOnScreen">Mostrar cola en pantalla</span>
+                                </label>
+                                <label for="cbRemoveUnusedColumns">
+                                    <input type="checkbox" checked="checked" id="cbRemoveUnusedColumns" /> <span>Eliminar columnas sin marcar de los datos de la cola</span>
+                                </label>
+                                <label for="cbShowLikesInQueue">
+                                    <input type="checkbox" checked="checked" id="cbShowLikesInQueue" /> <span localeMessage="cbShowLikesInQueue">Mostrar likes en la cola</span>
+                                </label>
+                                <label for="cbShowProfilePicInQueue">
+                                    <input type="checkbox" checked="checked" id="cbShowProfilePicInQueue" /> <span localeMessage="cbShowProfilePicInQueue">Mostrar fotos de perfil en la cola</span>
+                                  </label>
+                                <label for="cbClickNotNow">
+                                    <input type="checkbox" id="cbClickNotNow" /><span localeMessage="cbClickNotNow">Hacer clic en "No ahora" cuando Instagram pida mostrar notificaciones o guardar cuenta</span>
+                                </label>
+                                <label for="cbLoadQueueOnStartup">
+                                        <input type="checkbox" id="cbLoadQueueOnStartup" /><span localeMessage="cbLoadQueueOnStartup">Cargar la última cola conocida al iniciar</span>
+                                </label>
+                            </div>
+                        </details>
+                        <details id="detailsWaitTime">
+                            <summary localeMessage="ConfigureWaitTimes">Configurar tiempos de espera</summary>
+                            <div class="followOptions">
+                                <span><span localeMessage="Wait">Esperar</span> <input type="number" value="60" step="1" min="0" id="textSecondsBetweenActions"></input> <span localeMessage="secondsAfterAction">segundos después de seguir/dejar de seguir/dar like</span></span>
+                                <span><span localeMessage="Wait">Esperar</span> <input type="number" value="1" step="1" min="0" id="textSecondsAfterSkip"></input> <span localeMessage="secondsAfterSkip">segundos después de omitir</span></span>
+                                <label for="cbRandomizeTimeDelay">
+                                    <input type="checkbox" checked="checked" id="cbRandomizeTimeDelay" /><span localeMessage="randomizeWaitTime">Aleatorizar tiempo de espera en hasta</span>
+                                    <input type="number" value="50" step="1" min="0" id="igBotPercentRandomTimeDelay"></input>%
+                                </label>
+                                <span><span localeMessage="Wait">Esperar</span> <input type="number" value="10" step="1" id="textMinutesAfterSoftRateLimit"></input> <span localeMessage="minutesAfterSoft">minutos después del límite de tasa suave</span></span>
+                                <span><span localeMessage="Wait">Esperar</span> <input type="number" value="1" step="1" id="textHoursAfterHardRateLimit"></input> <span localeMessage="hoursAfterHard">horas después del límite de tasa duro</span></span>
+                                <span><span localeMessage="Wait">Esperar</span> <input type="number" value="10" step="1" id="textMinutesAfter429RateLimit"></input> <span localeMessage="minutesAfter429">minutos después del límite 429</span></span>
+                                <span>
+                                    <input type="checkbox" id="cbuseTimeDelayAfterAdditionalInfo" />
+                                    <span localeMessage="Wait">Esperar</span> <input type="number" value="2" step="1" id="texttimeDelayAfterAdditionalInfo"></input> <span localeMessage="SecondsAfterAdditionalInfo">segundos después de cargar información adicional de la cuenta</span>
+                                </span>
+                                <span>
+                                    <span localeMessage="Retry">Reintentar</span> <input type="number" value="10" step="1" id="textRetryAfterAdditionalInfo404"></input> <span localeMessage="RetryAfterAdditionalInfo404"> veces después del error 404 al obtener información adicional</span>
+                                </span>
+                                    <span>
+                                        <input type="checkbox" id="cbLimitActions" /> <span localeMessage="Wait">Esperar</span> <input type="number" value="24" step="1" id="textLimitActionsPerTime"> <span localeMessage="hoursAfterActions">horas después de realizar</span> <input type="number" value="50" step="1" id="textLimitActionsPer"></input> <span localeMessage="followsUnfollows">seguimientos / dejados de seguir</span>
+                                    </span>
+                                </div>
+                        </details>
+                        <details id="detailsProcessingQueueOptions">
+                            <summary localeMessage="QueueProcessingOptions">Opciones de procesamiento de cola</summary>
+                            <div class="followOptions">
+                                <label for="cbAutoSaveQueue">
+                                        <input type="checkbox" id="cbAutoSaveQueue" /> <span localeMessage="saveQueueAutomatically">Guardar cola automáticamente (en almacenamiento local) después de cada cuenta procesada</span>
+                                </label>
+                            </div>
+                        </details>
+                        <details id="detailsFollowingOptions">
+                            <summary localeMessage="FollowingOptions">Opciones de seguimiento</summary>
+                            <div class="followOptions">
+                                <label for="cbFollowAlreadyAttempted">
+                                    <input type="checkbox" id="cbFollowAlreadyAttempted" /> <span localeMessage="followAlreadyAttempted">Seguir a personas a las que ya he intentado seguir</span>
+                                </label>
+                                <label for="cbApplyFilterAutomatically" title="Aplicar automáticamente los filtros seleccionados actualmente de ahora en adelante">
+                                    <input type="checkbox" id="cbApplyFilterAutomatically" /> <span localeMessage="applyFiltersAutomatically">Aplicar filtros automáticamente mientras sigues</span>
+                                </label>
+                            </div>
+                        </details>
+                            <details id="detailsUnfollowingOptions">
+                            <summary localeMessage="UnfollowingOptions">Opciones de dejar de seguir</summary>
+                            <div class="followOptions">
+                                <label for="cbDontUnfollowFollowers">
+                                    <input type="checkbox" checked="checked" id="cbDontUnfollowFollowers" /> <span localeMessage="dontUnfollowFollowers">No dejar de seguir a personas que me siguen</span>
+                                </label>
+                                <label for="cbUnfollowOld">
+                                    <input type="checkbox" id="cbUnfollowOld" /> <span localeMessage="unfollowDaysAgo1">Dejar de seguir a personas que comencé a seguir hace más de</span>
+                                    <input type="number" value="30" step="1" id="textUnfollowOld"></input> <span localeMessage="unfollowDaysAgo2">días (incluso si te siguen)</span>
+                                </label>
+                                <label for="cbDontUnfollowFresh">
+                                    <input type="checkbox" checked="checked" id="cbDontUnfollowFresh" /> <span localeMessage="dontUnfollowDaysAgo1">No dejar de seguir a personas que comencé a seguir hace menos de</span>
+                                    <input type="number" value="3" step="1" id="textUnfollowNew"></input> <span localeMessage="dontUnfollowDaysAgo2">días</span>
+                                </label>
+                                <label for="cbDontUnfollowNonKernelBrosEngagementBot">
+                                    <input type="checkbox" checked="checked" id="cbDontUnfollowNonKernelBrosEngagementBot" /> <span localeMessage="dontUnfollowNonKernelBrosEngagementBot">No dejar de seguir a personas seguidas fuera</span>
+                                </label>
+                                <label for="cbDontUnfollowFilters">
+                                        <input type="checkbox" checked="checked" id="cbDontUnfollowFilters" /> <span localeMessage="dontUnfollowFilters">No dejar de seguir a personas que coinciden con mis filtros</span>
+                                </label>
+                            </div>
+                        </details>
+                        <details id="detailsUnfollowingOptions">
+                            <summary localeMessage="RemovingAndBlockingOptions">Opciones de eliminación y bloqueo</summary>
+                            <div class="followOptions">
+                                <label for="cbDontRemoveOrBlockFilters">
+                                    <input type="checkbox" checked="checked" id="cbDontRemoveOrBlockFilters" /> <span localeMessage="dontRemoveOrBlockFilters">No eliminar o bloquear a personas que coinciden con mis filtros</span>
+                                </label>
+                            </div>
+                        </details>
+                        <details id="detailsQueueColumns">
+                            <summary localeMessage="QueueColumnsOptions">Columnas para mostrar en la cola y exportación CSV *BETA*</summary>
+                            <div class="followOptions" id="queueColumnsOptions"></div>
+                        </details>
+                    </div>
+                </div>
+                <div class="tab5">
+                    <div id="igBotLog">
+                        <h3 localeMessage="Log">Registro</h3>
+                        <textarea id="txtConsole" spellcheck="false"></textarea>
+                        <br>
+                        <a href="javascript:void(0);" id="btnTrimLog">Recortar registro</a>
+                    </div>
+                </div>
+                <div class="tab7">
+                    <div id="faqhelp">
+                        <iframe id="iframeFAQ" src="https://kernelbros.com.ar"></iframe>
+                        <p>Por favor, lee todo el FAQ. Si tu pregunta no es respondida, contáctame. Por favor incluye capturas de pantalla y el Registro.</p>
+                        <p>
+                            <a href="https://kernelbros.com.ar/" target="_blank" id="iconHelp">https://kernelbros.com.ar</a>
+                            <a href="mailto:info@kernelbros.com" id="iconEmail" class="kernelbrosEmailLink">info@kernelbros.com</a>
+                            <a href="https://www.instagram.com/kernelbros" target="_blank" id="iconInstagram">@kernelbros</a>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>

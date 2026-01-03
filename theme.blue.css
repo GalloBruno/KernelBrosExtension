@@ -1,0 +1,360 @@
+/* Variables para el tema de tablas */
+:root {
+	--table-bg: #ffffff;
+	--table-border: #e2e8f0;
+	--table-header-bg: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+	--table-header-color: #ffffff;
+	--table-row-even: #ffffff;
+	--table-row-odd: #f8fafc;
+	--table-hover: #e2e8f0;
+	--table-text: #0f172a;
+	--table-text-secondary: #475569;
+	--table-radius: 8px;
+	--table-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--table-transition: 200ms ease-in-out;
+}
+
+.tablesorter-blue {
+	width: 100%;
+	background-color: var(--table-bg);
+	margin: 30px 0 0 0;
+	text-align: left;
+	border-spacing: 0;
+	border: 1px solid var(--table-border);
+	border-width: 1px 0 0 1px;
+	border-radius: var(--table-radius);
+	overflow: visible;
+	box-shadow: var(--table-shadow);
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	display: table !important;
+	visibility: visible !important;
+	position: relative;
+}
+
+.tablesorter-blue[role="grid"] {
+	display: table !important;
+	visibility: visible !important;
+	position: relative;
+}
+
+.tablesorter-blue th,
+.tablesorter-blue td {
+	border: 1px solid var(--table-border);
+	border-width: 0 1px 1px 0;
+	transition: background-color var(--table-transition);
+}
+
+/* header */
+.tablesorter-blue thead {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background: var(--table-bg);
+}
+
+.tablesorter-blue th,
+.tablesorter-blue thead td {
+	font-size: 14px;
+	line-height: 1.5;
+	font-weight: 600;
+	color: var(--table-header-color);
+	background: var(--table-header-bg);
+	border-collapse: collapse;
+	padding: 12px 16px;
+	text-shadow: none;
+	letter-spacing: 0.01em;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.tablesorter-blue tbody td,
+.tablesorter-blue tfoot th,
+.tablesorter-blue tfoot td {
+	padding: 12px 16px;
+	vertical-align: top;
+	color: var(--table-text);
+	font-size: 14px;
+	line-height: 1.5;
+}
+.tablesorter-blue .header,
+.tablesorter-blue .tablesorter-header {
+	/* black (unsorted) double arrow */
+	background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+	/* white (unsorted) double arrow */
+	/* background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAAP///////yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==); */
+	/* image */
+	/* background-image: url(images/black-unsorted.gif); */
+	background-repeat: no-repeat;
+	background-position: center right;
+	padding: 12px 32px 12px 16px;
+	white-space: normal;
+	cursor: pointer;
+	transition: all var(--table-transition);
+	position: relative;
+}
+
+.tablesorter-blue .header:hover,
+.tablesorter-blue .tablesorter-header:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+	/* Removemos transform para evitar bugs con sticky */
+}
+.tablesorter-blue .headerSortUp,
+.tablesorter-blue .tablesorter-headerSortUp,
+.tablesorter-blue .tablesorter-headerAsc {
+	background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+	/* black asc arrow */
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+	/* white asc arrow */
+	/* background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7); */
+	/* image */
+	/* background-image: url(images/black-asc.gif); */
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tablesorter-blue .headerSortDown,
+.tablesorter-blue .tablesorter-headerSortDown,
+.tablesorter-blue .tablesorter-headerDesc {
+	background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+	/* black desc arrow */
+	background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+	/* white desc arrow */
+	/* background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7); */
+	/* image */
+	/* background-image: url(images/black-desc.gif); */
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.tablesorter-blue thead .sorter-false {
+	background-image: none;
+	cursor: default;
+	padding: 12px 16px;
+}
+
+/* tfoot */
+.tablesorter-blue tfoot .tablesorter-headerSortUp,
+.tablesorter-blue tfoot .tablesorter-headerSortDown,
+.tablesorter-blue tfoot .tablesorter-headerAsc,
+.tablesorter-blue tfoot .tablesorter-headerDesc {
+	/* remove sort arrows from footer */
+	background-image: none;
+}
+
+/* tbody */
+.tablesorter-blue tbody {
+	display: table-row-group !important;
+	visibility: visible !important;
+}
+
+.tablesorter-blue tbody tr {
+	display: table-row !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+.tablesorter-blue tbody tr[role="row"] {
+	display: table-row !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+.tablesorter-blue td {
+	color: var(--table-text) !important;
+	background-color: var(--table-row-even) !important;
+	padding: 12px 16px;
+	vertical-align: top;
+	display: table-cell !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+.tablesorter-blue td[role="gridcell"] {
+	display: table-cell !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+/* hovered row colors
+ you'll need to add additional lines for
+ rows with more than 2 child rows
+ */
+.tablesorter-blue tbody > tr.hover > td,
+.tablesorter-blue tbody > tr:hover > td,
+.tablesorter-blue tbody > tr:hover + tr.tablesorter-childRow > td,
+.tablesorter-blue tbody > tr:hover + tr.tablesorter-childRow + tr.tablesorter-childRow > td,
+.tablesorter-blue tbody > tr.even.hover > td,
+.tablesorter-blue tbody > tr.even:hover > td,
+.tablesorter-blue tbody > tr.even:hover + tr.tablesorter-childRow > td,
+.tablesorter-blue tbody > tr.even:hover + tr.tablesorter-childRow + tr.tablesorter-childRow > td {
+	background-color: var(--table-hover);
+	/* Removemos transform scale para evitar bugs con scroll */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tablesorter-blue tbody > tr.odd.hover > td,
+.tablesorter-blue tbody > tr.odd:hover > td,
+.tablesorter-blue tbody > tr.odd:hover + tr.tablesorter-childRow > td,
+.tablesorter-blue tbody > tr.odd:hover + tr.tablesorter-childRow + tr.tablesorter-childRow > td {
+	background-color: var(--table-hover);
+	/* Removemos transform scale para evitar bugs con scroll */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tablesorter-blue tbody > tr {
+	transition: all var(--table-transition);
+	background-color: transparent !important;
+	display: table-row !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+.tablesorter-blue tbody tr.odd {
+	background-color: transparent !important;
+}
+
+.tablesorter-blue tbody tr.even {
+	background-color: transparent !important;
+}
+
+/* table processing indicator */
+.tablesorter-blue .tablesorter-processing {
+	background-position: center center !important;
+	background-repeat: no-repeat !important;
+	/* background-image: url(images/loading.gif) !important; */
+	background-image: url('data:image/gif;base64,R0lGODlhFAAUAKEAAO7u7lpaWgAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQBCgACACwAAAAAFAAUAAACQZRvoIDtu1wLQUAlqKTVxqwhXIiBnDg6Y4eyx4lKW5XK7wrLeK3vbq8J2W4T4e1nMhpWrZCTt3xKZ8kgsggdJmUFACH5BAEKAAIALAcAAAALAAcAAAIUVB6ii7jajgCAuUmtovxtXnmdUAAAIfkEAQoAAgAsDQACAAcACwAAAhRUIpmHy/3gUVQAQO9NetuugCFWAAAh+QQBCgACACwNAAcABwALAAACE5QVcZjKbVo6ck2AF95m5/6BSwEAIfkEAQoAAgAsBwANAAsABwAAAhOUH3kr6QaAcSrGWe1VQl+mMUIBACH5BAEKAAIALAIADQALAAcAAAIUlICmh7ncTAgqijkruDiv7n2YUAAAIfkEAQoAAgAsAAAHAAcACwAAAhQUIGmHyedehIoqFXLKfPOAaZdWAAAh+QQFCgACACwAAAIABwALAAACFJQFcJiXb15zLYRl7cla8OtlGGgUADs=') !important;
+}
+
+/* Zebra Widget - row alternating colors */
+.tablesorter-blue tbody tr.odd > td {
+	background-color: var(--table-row-odd);
+}
+.tablesorter-blue tbody tr.even > td {
+	background-color: var(--table-row-even);
+}
+
+/* Column Widget - column sort colors */
+.tablesorter-blue td.primary,
+.tablesorter-blue tr.odd td.primary {
+	background-color: rgba(59, 130, 246, 0.1);
+}
+.tablesorter-blue tr.even td.primary {
+	background-color: rgba(59, 130, 246, 0.15);
+}
+.tablesorter-blue td.secondary,
+.tablesorter-blue tr.odd td.secondary {
+	background-color: rgba(59, 130, 246, 0.08);
+}
+.tablesorter-blue tr.even td.secondary {
+	background-color: rgba(59, 130, 246, 0.12);
+}
+.tablesorter-blue td.tertiary,
+.tablesorter-blue tr.odd td.tertiary {
+	background-color: rgba(59, 130, 246, 0.05);
+}
+.tablesorter-blue tr.even td.tertiary {
+	background-color: rgba(59, 130, 246, 0.08);
+}
+
+/* caption */
+.tablesorter-blue > caption {
+	background-color: var(--table-bg);
+	padding: 12px 16px;
+	font-weight: 600;
+	color: var(--table-text);
+	font-size: 16px;
+}
+
+/* filter widget */
+.tablesorter-blue .tablesorter-filter-row {
+	background-color: #f8fafc;
+	border-top: 2px solid var(--table-border);
+}
+.tablesorter-blue .tablesorter-filter-row td {
+	background-color: #f8fafc;
+	line-height: normal;
+	text-align: center; /* center the input */
+	padding: 8px;
+	-webkit-transition: all var(--table-transition);
+	-moz-transition: all var(--table-transition);
+	-o-transition: all var(--table-transition);
+	transition: all var(--table-transition);
+}
+/* optional disabled input styling */
+.tablesorter-blue .tablesorter-filter-row .disabled {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	cursor: not-allowed;
+}
+/* hidden filter row */
+.tablesorter-blue .tablesorter-filter-row.hideme td {
+	/*** *********************************************** ***/
+	/*** change this padding to modify the thickness     ***/
+	/*** of the closed filter row (height = padding x 2) ***/
+	padding: 2px;
+	/*** *********************************************** ***/
+	margin: 0;
+	line-height: 0;
+	cursor: pointer;
+}
+.tablesorter-blue .tablesorter-filter-row.hideme * {
+	height: 1px;
+	min-height: 0;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	/* don't use visibility: hidden because it disables tabbing */
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+/* filters */
+.tablesorter-blue input.tablesorter-filter,
+.tablesorter-blue select.tablesorter-filter {
+	width: 98%;
+	height: auto;
+	margin: 0;
+	padding: 8px 12px;
+	background-color: #ffffff;
+	border: 1px solid var(--table-border);
+	border-radius: 6px;
+	color: var(--table-text);
+	font-size: 14px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all var(--table-transition);
+	-moz-transition: all var(--table-transition);
+	-o-transition: all var(--table-transition);
+	transition: all var(--table-transition);
+}
+
+.tablesorter-blue input.tablesorter-filter:focus,
+.tablesorter-blue select.tablesorter-filter:focus {
+	outline: none;
+	border-color: #2563eb;
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+	background-color: #ffffff;
+}
+
+.tablesorter-blue input.tablesorter-filter:hover,
+.tablesorter-blue select.tablesorter-filter:hover {
+	border-color: #cbd5e1;
+}
+/* rows hidden by filtering (needed for child rows) */
+.tablesorter .filtered {
+	display: none;
+}
+
+/* ajax error row */
+.tablesorter .tablesorter-errorRow td {
+	text-align: center;
+	cursor: pointer;
+	background-color: #fef2f2;
+	color: #dc2626;
+	font-weight: 500;
+	border-color: #fecaca;
+	transition: all var(--table-transition);
+}
+
+.tablesorter .tablesorter-errorRow:hover td {
+	background-color: #fee2e2;
+	transform: scale(1.01);
+}

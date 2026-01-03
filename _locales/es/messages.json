@@ -1,0 +1,518 @@
+{
+   "AccountFilters": {
+      "message": "Filtros de Cuenta"
+   },
+   "AccountFiltersHint": {
+      "message": "Puedes habilitar aplicar filtros automáticamente al seguir o dejar de seguir en configuración. Esto se recomienda para eficiencia y evitar límites de velocidad."
+   },
+   "AccountNotFound404": {
+      "message": "¡404 no encontrado!"
+   },
+   "AccountsLoaded": {
+      "message": "Se cargaron $tmpQueue$ cuentas adicionales, $acctsQueue$ cuentas cargadas hasta ahora",
+      "placeholders": {
+         "acctsQueue": {
+            "content": "$2",
+            "example": "500"
+         },
+         "tmpQueue": {
+            "content": "$1",
+            "example": "24"
+         }
+      }
+   },
+   "AddToWhitelist": {
+      "message": "Añadir seleccionados a lista blanca",
+      "title": "Añadir cuentas seleccionadas a la lista de cuentas que nunca dejar de seguir"
+   },
+   "AddedToWhitelist": {
+      "message": " añadido a lista blanca"
+   },
+   "AlreadyOnWhitelist": {
+      "message": " ya está en lista blanca"
+   },
+   "ApplyFilters": {
+      "message": "Aplicar Filtros a Cola Actual"
+   },
+   "BelowFiltersApply": {
+      "message": "Los siguientes filtros solo se aplican al seguir (no al dejar de seguir):"
+   },
+   "BioContainsText": {
+      "message": "Biografía Contiene Texto: "
+   },
+   "BioNotContainsText": {
+      "message": "Biografía No Contiene Texto: "
+   },
+   "Block": {
+      "message": "Bloquear"
+   },
+   "BusinessAccounts": {
+      "message": "Cuentas Empresariales"
+   },
+   "BusinessCategoryNameContainsText": {
+      "message": "Categoría Empresarial Contiene Texto: "
+   },
+   "BusinessCategoryNameNotContainsText": {
+      "message": "Categoría Empresarial No Contiene Texto: "
+   },
+   "ConfigureWaitTimes": {
+      "message": "Configurar Tiempos de Espera"
+   },
+   "DataLoaded": {
+      "message": "Se cargaron datos adicionales para $tmpQueue$ de $acctsQueue$ cuentas",
+      "placeholders": {
+         "acctsQueue": {
+            "content": "$2",
+            "example": "500"
+         },
+         "tmpQueue": {
+            "content": "$1",
+            "example": "24"
+         }
+      }
+   },
+   "DoesntFollowMe": {
+      "message": "No Me Sigue"
+   },
+   "Done": {
+      "message": "Hecho. "
+   },
+   "ExternalUrlContainsText": {
+      "message": "Enlace en Biografía Contiene: "
+   },
+   "ExternalUrlNotContainsText": {
+      "message": "Enlace en Biografía No Contiene: "
+   },
+   "FinishedAdditionalData": {
+      "message": "Se terminó de obtener información adicional, ¿guardar la cola ahora?"
+   },
+   "Follow": {
+      "message": "Seguir"
+   },
+   "FollowRatio": {
+      "message": "Ratio de Seguimiento"
+   },
+   "Follow_Ratio": {
+      "message": "Ratio de Seguimiento"
+   },
+   "FollowedByMe": {
+      "message": "Seguido por Mí"
+   },
+   "Followers": {
+      "message": "Seguidores"
+   },
+   "Following": {
+      "message": "Siguiendo"
+   },
+   "FollowingOptions": {
+      "message": "Opciones de Seguimiento"
+   },
+   "FollowsMe": {
+      "message": "Me Sigue"
+   },
+   "Full_Name": {
+      "message": "Nombre Completo"
+   },
+   "GetMoreData": {
+      "message": "Obtener Más Datos",
+      "title": "Obtiene más datos sobre cada cuenta en la cola: Estado Privado, Seguidores, Siguiendo, Cantidad de Publicaciones"
+   },
+   "HasNoProfilePicture": {
+      "message": "Sin Foto de Perfil"
+   },
+   "HasProfilePicture": {
+      "message": "Con Foto de Perfil"
+   },
+   "Has_Profile_Pic": {
+      "message": "Con Foto de Perfil"
+   },
+   "HashtagPage": {
+      "message": "Página de Hashtag"
+   },
+   "Hide": {
+      "message": "Ocultar"
+   },
+   "InvertSelection": {
+      "message": "Seleccionar Opuesto / Invertir Selección",
+      "title": "Selecciona lo opuesto de lo que está actualmente seleccionado"
+   },
+   "JoinedRecentlyAccounts": {
+      "message": "Cuentas Unidas Recientemente"
+   },
+   "LastPosted": {
+      "message": "Última Publicación (hace días) Nota: KernelBrosEngagementBot no puede saber cuándo una cuenta privada publicó por última vez, por lo que este filtro no se aplica a cuentas privadas.."
+   },
+   "Last_Post_Date": {
+      "message": "Fecha de Última Publicación"
+   },
+   "Like": {
+      "message": "Me Gusta"
+   },
+   "LikeOnly": {
+      "message": "Solo Me Gusta"
+   },
+   "LikeUsersLatest": {
+      "message": "Me Gusta a Última Publicación del Usuario"
+   },
+   "LoadCommenters": {
+      "message": "Cargar Comentaristas de $account$",
+      "placeholders": {
+         "account": {
+            "content": "$1",
+            "example": "kernelbros"
+         }
+      },
+      "title": "Carga cuentas que comentaron en publicaciones de $account$"
+   },
+   "LoadCurrentFollowers": {
+      "message": "Cargar Seguidores de $account$",
+      "placeholders": {
+         "account": {
+            "content": "$1",
+            "example": "kernelbros"
+         }
+      },
+      "title": "Carga los seguidores de $account$ en la cola"
+   },
+   "LoadCurrentFollowing": {
+      "message": "Cargar Siguiendo de $account$",
+      "placeholders": {
+         "account": {
+            "content": "$1",
+            "example": "kernelbros"
+         }
+      },
+      "title": "Carga cuentas que $account$ está siguiendo en la cola"
+   },
+   "LoadCurrentHashtagPosters": {
+      "message": "Cargar Publicadores de #$hashtag$",
+      "placeholders": {
+         "hashtag": {
+            "content": "$1",
+            "example": "ootd"
+         }
+      },
+      "title": "Carga cuentas que publicaron con el hashtag $hashtag$ en la cola"
+   },
+   "LoadLikers": {
+      "message": "Cargar Gente que Dio Me Gusta de $account$",
+      "placeholders": {
+         "account": {
+            "content": "$1",
+            "example": "kernelbros"
+         }
+      },
+      "title": "Carga cuentas que dieron me gusta a publicaciones de $account$"
+   },
+   "LoadPendingFollowRequests": {
+      "message": "Cargar Solicitudes de Seguimiento Pendientes",
+      "title": "Cargar solicitudes para seguir cuentas privadas que no han sido aprobadas o rechazadas aún (estas cuentan hacia tu total de seguidores)"
+   },
+   "LoadQueue": {
+      "message": "Cargar Cola"
+   },
+   "LoadWhiteList": {
+      "message": "Cargar lista blanca"
+   },
+   "Log": {
+      "message": "Registro"
+   },
+   "MutualFollowedBy": {
+      "message": "Seguidor Mutuo (Seguidores en Común)"
+   },
+   "NonBusinessAccounts": {
+      "message": "Cuentas No Empresariales"
+   },
+   "NonJoinedRecentlyAccounts": {
+      "message": "Cuentas No Unidas Recientemente"
+   },
+   "NonVerifiedAccounts": {
+      "message": "Cuentas No Verificadas"
+   },
+   "NotFollowedByMe": {
+      "message": "No Seguido por Mí"
+   },
+   "PerformanceOptions": {
+      "message": "Opciones de Rendimiento"
+   },
+   "PicsWhenFollowing": {
+      "message": "Foto(s) al Seguir"
+   },
+   "Posts": {
+      "message": "Publicaciones"
+   },
+   "PostsFrom": {
+      "message": "Publicaciones de"
+   },
+   "PostsFromFeed": {
+      "message": "Publicaciones del Muro"
+   },
+   "PreviouslyAttempted": {
+      "message": "Intento previo de seguir: $number$ cuentas",
+      "placeholders": {
+         "number": {
+            "content": "$1",
+            "example": "2874"
+         }
+      }
+   },
+   "PreviouslyLiked": {
+      "message": "Me Gustó Previamente: $number$ publicaciones",
+      "placeholders": {
+         "number": {
+            "content": "$1",
+            "example": "2874"
+         }
+      }
+   },
+   "Private": {
+      "message": "Privado"
+   },
+   "PrivateAccounts": {
+      "message": "Cuentas Privadas"
+   },
+   "ProcessQueue": {
+      "message": "Procesar Cola  ↑"
+   },
+   "PublicAccounts": {
+      "message": "Cuentas Públicas"
+   },
+   "QueueEmpty": {
+      "message": "¡No hay cuentas en la cola!"
+   },
+   "QueueLimitReached": {
+      "message": "Se alcanzó el límite de la cola. "
+   },
+   "QueueLoadFile": {
+      "message": "Cargar cola desde archivo"
+   },
+   "QueueLoadLocal": {
+      "message": "Cargar última cola conocida"
+   },
+   "QueueLoadQuestion": {
+      "message": "¿De dónde te gustaría cargar la cola?"
+   },
+   "QueueLoaded": {
+      "message": "Cola cargada: $number$ cuentas",
+      "placeholders": {
+         "number": {
+            "content": "$1",
+            "example": "2874"
+         }
+      }
+   },
+   "QueueProcessingOptions": {
+      "message": "Opciones de Procesamiento de Cola"
+   },
+   "QueueSavedFile": {
+      "message": "Cola guardada en archivo kernelbros-queue.txt"
+   },
+   "QueueSavedLocal": {
+      "message": "Cola guardada en almacenamiento local"
+   },
+   "RateLimit429": {
+      "message": "Límite de velocidad 429 de instagram, esperando $time$ minutos",
+      "placeholders": {
+         "time": {
+            "content": "$1",
+            "example": "1"
+         }
+      }
+   },
+   "RateLimitHard": {
+      "message": "límite de velocidad de instagram, esperando $time$ horas",
+      "placeholders": {
+         "time": {
+            "content": "$1",
+            "example": "48"
+         }
+      }
+   },
+   "RateLimitSoft": {
+      "message": "(suave) límite suave 403 de instagram, esperando $time$ minutos",
+      "placeholders": {
+         "time": {
+            "content": "$1",
+            "example": "30"
+         }
+      }
+   },
+   "RemoveFromFollowers": {
+      "message": "Eliminar Seguidor"
+   },
+   "RemoveSelected": {
+      "message": "Eliminar seleccionados",
+      "title": "Elimina todas las cuentas seleccionadas"
+   },
+   "RemovingAndBlockingOptions": {
+      "message": "Opciones de Eliminación y Bloqueo"
+   },
+   "ResetFilters": {
+      "message": "Restablecer Filtros"
+   },
+   "SaveQueue": {
+      "message": "Guardar Cola"
+   },
+   "SaveWhiteList": {
+      "message": "Guardar lista blanca",
+      "title": "Guarda la lista blanca en almacenamiento local y/o disco"
+   },
+   "SecondsAfterAdditionalInfo": {
+      "message": "segundos después de cargar información adicional de la cuenta"
+   },
+   "SelectAll": {
+      "message": "Seleccionar Todo",
+      "title": "Selecciona todas las cuentas mostradas"
+   },
+   "SelectNone": {
+      "message": "Seleccionar Ninguno",
+      "title": "No selecciona nada"
+   },
+   "Settings": {
+      "message": "Configuración"
+   },
+   "Stop": {
+      "message": "¡Detener!"
+   },
+   "TimeDelay": {
+      "message": "esperando $time$ segundos",
+      "placeholders": {
+         "time": {
+            "content": "$1",
+            "example": "48"
+         }
+      }
+   },
+   "Unfollow": {
+      "message": "Dejar de Seguir"
+   },
+   "UnfollowingOptions": {
+      "message": "Opciones de Dejar de Seguir"
+   },
+   "Username": {
+      "message": "Nombre de Usuario"
+   },
+   "Verified": {
+      "message": "Verificado"
+   },
+   "VerifiedAccounts": {
+      "message": "Cuentas Verificadas"
+   },
+   "Wait": {
+      "message": "Esperar"
+   },
+   "WhitelistLoadFile": {
+      "message": "Cargar lista blanca desde archivo"
+   },
+   "WhitelistLoadLocal": {
+      "message": "Cargar última lista blanca conocida"
+   },
+   "WhitelistLoadQuestion": {
+      "message": "¿De dónde te gustaría cargar la lista blanca?"
+   },
+   "WhitelistLoaded": {
+      "message": "Lista blanca cargada: $number$ cuentas",
+      "placeholders": {
+         "number": {
+            "content": "$1",
+            "example": "2874"
+         }
+      }
+   },
+   "WhitelistSavedFile": {
+      "message": "Lista blanca guardada en archivo kernelbros-whitelist.txt"
+   },
+   "WhitelistSavedLocal": {
+      "message": "Lista blanca guardada en almacenamiento local"
+   },
+   "appDesc": {
+      "message": "Seguimiento/dejar de seguir/me gusta automático con filtros avanzados, temporizadores aleatorios y más características de alta tecnología."
+   },
+   "appName": {
+      "message": "Automatizador KernelBrosEngagementBot para Instagram"
+   },
+   "applyFiltersAutomatically": {
+      "message": "Aplicar Filtros Automáticamente Mientras Sigues"
+   },
+   "cbClickNotNow": {
+      "message": "Haz clic en 'Ahora no' cuando Instagram solicite mostrar notificaciones"
+   },
+   "cbConvenienceLinks": {
+      "message": "Mostrar botones de conveniencia en el muro (Lista Blanca/Dejar de Seguir)"
+   },
+   "cbLoadQueueOnStartup": {
+      "message": "Cargar la última cola conocida al iniciar"
+   },
+   "cbRemoveFromQueue": {
+      "message": "Eliminar cuentas de la cola después de procesar"
+   },
+   "cbShowLikesInQueue": {
+      "message": "Mostrar me gusta en la cola"
+   },
+   "cbShowProfilePicInQueue": {
+      "message": "Mostrar fotos de perfil en la cola"
+   },
+   "cbShowStamps": {
+      "message": "Mostrar sellos en la cola"
+   },
+   "cbShowUnfollowingInQueue": {
+      "message": "Mostrar dejar de seguir en la cola"
+   },
+   "dontRemoveOrBlockFilters": {
+      "message": "No eliminar ni bloquear personas que coincidan con mis filtros"
+   },
+   "dontUnfollowDaysAgo1": {
+      "message": "No dejar de seguir a personas a las que comencé a seguir hace menos de"
+   },
+   "dontUnfollowDaysAgo2": {
+      "message": "hace días"
+   },
+   "dontUnfollowFilters": {
+      "message": "No dejar de seguir a personas que coincidan con mis filtros"
+   },
+   "dontUnfollowFollowers": {
+      "message": "No dejar de seguir a personas que me siguen"
+   },
+   "dontUnfollowNonKernelBrosEngagementBot": {
+      "message": "No dejar de seguir a personas seguidas fuera de KernelBrosEngagementBot"
+   },
+   "followAlreadyAttempted": {
+      "message": "Seguir a personas que ya he intentado"
+   },
+   "followsUnfollows": {
+      "message": "sigue / deja de seguir"
+   },
+   "hoursAfterActions": {
+      "message": "horas después de realizar"
+   },
+   "hoursAfterHard": {
+      "message": "horas después del límite de velocidad duro"
+   },
+   "minutesAfter429": {
+      "message": "minutos después del límite de velocidad 429"
+   },
+   "minutesAfterSoft": {
+      "message": "minutos después del límite de velocidad suave"
+   },
+   "queueLimit": {
+      "message": "Limitar cola a"
+   },
+   "randomizeWaitTime": {
+      "message": "Aleatorizar tiempo de espera hasta"
+   },
+   "saveQueueAutomatically": {
+      "message": "Guardar cola automáticamente (en almacenamiento local) después de cada cuenta procesada"
+   },
+   "secondsAfterAction": {
+      "message": "segundos después de seguir/dejar de seguir/me gusta"
+   },
+   "secondsAfterSkip": {
+      "message": "segundos después de saltar"
+   },
+   "unfollowDaysAgo1": {
+      "message": "Dejar de seguir a personas a las que comencé a seguir hace más de"
+   },
+   "unfollowDaysAgo2": {
+      "message": "hace días (incluso si me siguen)"
+   }
+}
